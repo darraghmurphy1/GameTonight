@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
+
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 pt-3">
+            <div class="card card-body pb-0">
+
+                <h3 class="mb-3">Make your own post</h3>
+
+                <!-- Post form -->
+                <form action="{% url 'user_post' %}" method="POST" class="text-center mb-0">
+                    {{ post_form | crispy }}
+                    {% csrf_token%}
+                    <button type="submit" class="btn btn--main no-border">
+                    Make a Post <i class="fas fa-plus p-1"></i></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center pt-3">
+
+            <h3 class="mb-3">You must log in to access this content.</h3>
+
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}
