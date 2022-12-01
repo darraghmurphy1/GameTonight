@@ -11,7 +11,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
-    paginate_by = 4
+    paginate_by = 10
 
 
 class PostDetail(View):
@@ -115,13 +115,86 @@ class UserPostView(View):
         return HttpResponseRedirect(reverse('home'))
 
 
-class PostLike(View):
+class PostEditView(View):
+    """ View to allow user to edit their post """
 
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
+    def get(self, request, id):
+        """ Get question data and return a prefilled form """
+
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, id=id)
+
+        data = {'title': post.title, 'content': post.content}
+        edit_form = PostForm(initial=data)
+
+        return render(
+            request,
+            'edit_post.html',
+            {
+                'post': post,
+                'edit_form': edit_form
+            }
+        )
+
+    def post(self, request, id):
+        """ This uses form data to update post
+        """
+
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, id=id)
+
+        edit_form = PostForm(instance=post, data=request.POST)
+
+        if edit_form.is_valid():
+            post.title = edit_form.cleaned_data.get('title')
+            post.content = edit_form.cleaned_data.get('content')
+            post.slug = slugify(edit_form.cleaned_data.get('title'))
+            post.save()
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                'You edited your post successfully.'
+            )
+
         else:
-            post.likes.add(request.user)
+            edit_form = QuestionForm()
+            messages.add_message(
+                request,
+                messages.WARNING,
+                'Your question has not been edited.'
+            )
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('home'))
+
+
+class PostDeleteView(View):
+    """ View to allow user to delete a specific question """
+
+    def get(self, request, id):
+        """ Get question to be deleted and render a delete form """
+
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, id=id)
+
+        return render(
+            request,
+            'delete_post.html',
+            {
+                'post': post,
+            }
+        )
+
+    def post(self, request, id):
+        """ Delete existing question """
+
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, id=id)
+
+        post.delete()
+        messages.add_message(
+            request,
+            messages.SUCCESS,
+            'Your question has been deleted.'
+        )
+
+        return HttpResponseRedirect(reverse('home'))
