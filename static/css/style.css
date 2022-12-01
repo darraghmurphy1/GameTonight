@@ -3,15 +3,19 @@ body {
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: Lato, Verdana;
     font-size: 2rem;
     font-weight: 60000;
     color:  #7c7cdc;
 }
 
+.btn .btn-primary {
+    background-color: #fff;
+}
+
 
 .light-bg {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(21, 199, 45);
 }
 
 .dark-bg {
@@ -48,7 +52,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #000000;
     color: white;
     position: relative;
 }

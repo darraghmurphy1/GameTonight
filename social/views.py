@@ -161,17 +161,17 @@ class PostEditView(View):
             messages.add_message(
                 request,
                 messages.WARNING,
-                'Your question has not been edited.'
+                'The post has been updated.'
             )
 
         return HttpResponseRedirect(reverse('home'))
 
 
 class PostDeleteView(View):
-    """ View to allow user to delete a specific question """
+    """ This view allows to delete a post """
 
     def get(self, request, id):
-        """ Get question to be deleted and render a delete form """
+        """ get post to delete """
 
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, id=id)
@@ -185,7 +185,7 @@ class PostDeleteView(View):
         )
 
     def post(self, request, id):
-        """ Delete existing question """
+        """ Delete the post """
 
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, id=id)
@@ -194,7 +194,7 @@ class PostDeleteView(View):
         messages.add_message(
             request,
             messages.SUCCESS,
-            'Your question has been deleted.'
+            '{Post has been deleted.'
         )
 
         return HttpResponseRedirect(reverse('home'))

@@ -17,10 +17,10 @@
             <!-- Show Edit and Delete buttons on questions created by the user -->
             {% if request.user == post.author %}
             <div class="d-flex justify-content-center">
-                <a class="btn btn--secondary btn--icon mx-1" href="{% url 'edit_post' post.id %}"
+                <a class="btn btn btn-light" href="{% url 'edit_post' post.id %}"
                     aria-label="Delete question">edit</a>
                   
-                <a class="btn btn--secondary btn--icon mx-1" href="{% url 'delete_post' post.id %}"
+                <a class="btn btn-light" href="{% url 'delete_post' post.id %}"
                     aria-label="Delete question">delete</a>
             </div>
             {% endif %}
@@ -67,8 +67,8 @@
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ comment.name }}
+                        <!-- The commenter's name goes here.-->
+                        {{ user.get_username }}
                         <span class=" text-muted font-weight-normal">
                             <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
@@ -91,7 +91,7 @@
                     {% csrf_token %}
 
                     <div class="text-center my-4">
-                        <button type="submit" class="btn btn--main">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                         <a class="btn btn--secondary mx-1" href="{% url 'home' %}">Cancel</a>
                     </div>
                 </form>

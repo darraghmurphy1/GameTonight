@@ -10,6 +10,7 @@ urlpatterns = [
 
     # url to post form
     path('user_post', views.UserPostView.as_view(), name='user_post'),
+    
     path('edit_post/<int:id>/', views.PostEditView.as_view(), name='edit_post'),
 
     path('delete_post/<int:id>/',views.PostDeleteView.as_view(),name='delete_post'),
