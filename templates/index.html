@@ -4,25 +4,16 @@
 
 {% load crispy_forms_tags %}
 
-<!-- Render when user is authenticated -->
-{% if user.is_authenticated %}
-<div class="container-fluid mt-4">
-    <div class="row">
-        <div class="col-12">
-
-            <a class="btn btn-primary" href="{% url 'user_post' %}">Make a Post</a>
-
-        </div>
-    </div>
-</div>
 
 
 
 <div class="container-fluid">
     <div class="row">
+        <a class="btn btn-primary" href="{% url 'user_post' %}">Make a Post</a>
 
         <!-- list of posts -->
         <div class="col-12 mt-3 left">
+            <p>Welcome! Here you can find local football games or send let people know if you need any extra players. Look through the posts to see details or create a post yourself. Make an account so that you can comment and post.
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-4">
@@ -30,15 +21,14 @@
                         <div class="card-body">
 
                                 <div>
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">{{ post.author }}</p>
                                 </div>
                             
                                 <a href="{% url 'post_detail' post.slug %}" class="link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                            <p class="card-text">{{ post.created_on}} 
                                 {{ post.number_of_likes }}</p>
                         </div>
                     </div>
@@ -67,6 +57,6 @@
         </ul>
     </nav>
     {% endif %}
-    {% endif %}
+
 </div>
 {%endblock%}

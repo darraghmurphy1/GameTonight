@@ -11,14 +11,16 @@
         <div class="col-md-6 offset-md-3 pt-3">
             <div class="card card-body pb-0">
 
-                <h3 class="mb-3">Make your own post</h3>
+                <h3 class="mb-3">Look for players</h3>
+                <p>Use this form to request a game or players. Include location, time and how many players you need.</p>
 
                 <!-- Post form -->
                 <form action="{% url 'user_post' %}" method="POST" class="text-center mb-0">
                     {{ post_form | crispy }}
                     {% csrf_token%}
-                    <button type="submit" class="btn">
-                    Make a Post <i class="fas fa-plus p-1"></i></button>
+                    <hr>
+                    <button type="submit" class="btn btn-secondary">
+                    Submit</button>
                 </form>
 
             </div>

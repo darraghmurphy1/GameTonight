@@ -11,7 +11,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
-    paginate_by = 10
+    paginate_by = 9
 
 
 class PostDetail(View):
@@ -194,7 +194,7 @@ class PostDeleteView(View):
         messages.add_message(
             request,
             messages.SUCCESS,
-            '{Post has been deleted.'
+            'Post has been deleted.'
         )
 
         return HttpResponseRedirect(reverse('home'))

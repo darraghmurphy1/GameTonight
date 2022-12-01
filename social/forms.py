@@ -4,6 +4,7 @@ from django import forms
 
 class CommentForm(forms.ModelForm):
     class Meta:
+        body = forms.CharField(widget=forms.Textarea, label='')
         model = Comment
         fields = ('body',)
 
