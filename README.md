@@ -39,3 +39,23 @@ As a Site User / Admin I can view the number of likes on each post so that I can
 As a Site User I can click on a post so that I can read the full text
 
 As a Site User I can view a list of posts so that I can select one to read
+
+
+### Scope
+
+The following aspects must be present in the aplication:
+
+* Responsive design
+
+* Ability to create an account.
+
+* Create, read, update and delete posts.
+
+* Create and read comments.
+
+* Ability to search for for posts.
+
+* Upvote / downvote question and replies
+
+
+
