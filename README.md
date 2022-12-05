@@ -55,8 +55,6 @@ The following aspects must be present in the aplication:
 
 * Ability to search for for posts.
 
-* Upvote / downvote question and replies
-
 
 <!-- insert pictures of user stories here >
 
@@ -95,17 +93,17 @@ Approved - Automatically approves comments for posting
 WireFrames
 
 Home
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/homewireframe.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/homewireframe.png)
 Post Detail
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/postdetailwire.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/postdetailwire.png)
 Make a Post
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/post1.png)
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/post2.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/post1.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/post2.png)
 Sign In/Out
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/loginwire.png)
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/signoutwire.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/loginwire.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/signoutwire.png)
 Registration
-(vscode-remote://darraghmurphy-viewpoint-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/ViewPoint/readmemedia/registrationwire.png)
+(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/registrationwire.png)
 
 Colour Scheme 
 
@@ -136,8 +134,111 @@ Search - This funtion allows a user to search for a post.
 
 Tests
 
+Testing User Stories
+
+As a Site User I can see the amount of comments on a post so that I cam see how many responses the post has.
+-Clearly displays the amount of comments on the post beside a comment icon
+
+As a Site user I can create, read, update and delete posts so that I can advertise my post or change it as and when needed.
+-By using the post form I can post to the site and then edit it with the edit form and delete it by pressing two buttons.
+
+As a Site User I can leave comments on a post so that I can declare availabilty.
+-Comments are successfully left through the comment form on a post.
+
+As a Site User I can register an account so that I can comment and like
+-By using the registration page I can create an account. 
+
+Site User / Admin I can view comments on an individual post so that I can read the conversation
+-Comments are easily visable on the post detail page.
+
+As a Site User I can click on a post so that I can read the full text
+-By clicking on the post you will see it in more detail.
+
+As a Site User I can view a list of posts so that I can select one to read
+-The user is greeted with a full list of posts.
 
 
+Homepage
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Posts are visable | When page is loaded posts show on page | Pass |
+| Footer | Footer is present | Pass |
+
+Post Detail 
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Post visable | Post loads up on its own page | Pass |
+| Created on/ Updated on | The post has a time and date for posting or most recent edit | Pass |
+| Comments | Comments are visable | Pass |
+| Comment author | the username of the author is visable | Pass | 
+| Comment form | Comment form is visable and working | Pass |
+| Comment post | When comment is submitted it is added to the comment list in chronological order | Pass |
+| Authorisation | Comment box only available to those who have made an account | Pass |
+| Delete Post | If the original poster clicks onto their post the delete button is present | Pass |
+| Edit Post | If the original poster clicks onto their post the edit button is present | Pass |
+| Footer | Footer is present | Pass |
+
+Sign In 
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Username | The textbox for the user's unique username is available | Pass | 
+| Password | The password textbox is available and characters are hidden when typed | Pass | 
+| Button | When button is pressed the user is logged in | Pass |
+| Footer | Footer is present | Pass |
+
+Sign Out 
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Button | When button is pressed the user is logged out | Pass |
+| Footer | Footer is present | Pass |
+
+Registration
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Username | The textbox for the user's unique username is available | Pass | 
+| Password | The password textbox is available and characters are hidden when typed | Pass | 
+| Button | When button is pressed the user is logged in | Pass |
+| Footer | Footer is present | Pass |
+
+User Post  
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Textbox | 2 textboxes are present for title and content. Both work. | Pass |
+| Submit Button | When button is pressed the post is published | Pass |
+| Cancel button | When post is cancelled the page redirects | Pass
+| Footer | Footer is present | Pass |
+
+Edit Post
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Textbox | 2 textboxes are present for title and content. Both work. | Pass |
+| Submit Button | When button is pressed the post is updated | Pass |
+| Cancel button | When post is cancelled the page redirects | Pass |
+| Footer | Footer is present | Pass |
+
+Delete Post 
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Navbar | All navigation links are working | Pass |
+| Textbox | 2 textboxes are present for title and content. Both work. | Pass |
+| Yes Button | When button is pressed the post is deleted | Pass |
+| No button | When clicked the deletion is abandoned | Pass |
+| Footer | Footer is present | Pass |
 ## Technologies Used
 
 ### Languages Used
