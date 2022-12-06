@@ -121,24 +121,33 @@ The colours used in this site are mostly green to suit the subject content of fo
 Features 
 
 Navbar - The navbar appears on every page and was created with the help of Bootstrap. It displays links to the homepage as well as log in/log out and registration.
+![chrome_1ZtTW6LHrF](https://user-images.githubusercontent.com/103134533/205867239-8177a731-b53f-436c-94c2-2c63c86e999e.png)
 
 List of Posts - This is the homepage which will display all the posts that have been made on the site. It involves the title, the poster and small excerpt of the post.
+![chrome_8uzWMz8CEJ](https://user-images.githubusercontent.com/103134533/205867166-4bd7d52a-3822-488e-9b06-5cde5eb41b31.png)
 
 Post Form - This is the form that allows a user to make a post. It is a very simple form with instructions displayed through html text and simply asks for a post title and post content. 
+![chrome_KkubMK1vvA](https://user-images.githubusercontent.com/103134533/205867359-bbb752c0-e252-4139-9580-ba2d02c12594.png)
+
 
 Comment Form  - This is a simple form that allows users to comment on posts to allow users to communicate with each other. It only has one text box as there is no need for any more information to be displayed.
+![chrome_ocCu69WZem](https://user-images.githubusercontent.com/103134533/205867419-fc3c0c78-01ac-4574-b84b-85ebc130a960.png)
 
 Footer - This simple footer just improves the aesthetics of the page. The footer makes it clear that this is the end of the page and just simply states the name of the site with a solid white bar across the bottom of the screen.
 
 Pagination - This features allows the homepage to hold a maximum of 9 posts before the user will need to press the "next" button that will appear when there is more than 9 posts. This feature exists to keep the site looking tidy and prevents it from having too much information on one page.  
+![chrome_Kn5JH9V4T4](https://user-images.githubusercontent.com/103134533/205867606-a468cbf4-8cb0-46f1-8e30-56a7e2658cc0.png)
 
-Detailed View - This is a link used to access the more detailed view of a particular post and enables the comment feature as well. 
+Detailed View -![chrome_1qWZvEIBPI](https://user-images.githubusercontent.com/103134533/205867564-44b7884b-1a80-4adf-b6e1-c4ab2961f1cd.png)
+ This is a link used to access the more detailed view of a particular post and enables the comment feature as well. 
 
 Edit and Delete - If the original poster clicks into a more detailed view of their own post they will have the edit and delete buttons available to them. This allows a user to update their own post or even delete it. 
+![7bEPCgkTuO](https://user-images.githubusercontent.com/103134533/205867687-ac815bac-88a8-4f09-bc7b-e7277271fa8a.png)
+![chrome_XIQckK33zX](https://user-images.githubusercontent.com/103134533/205867708-8088a8ec-e8aa-4807-a11a-292925b4bc92.png)
 
 Search - This funtion allows a user to search for a post.
 
-<!-- insert screenshots of every page and split features into their own pages -->
+
 
 
 Tests
