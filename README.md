@@ -3,6 +3,7 @@
 
 A user will be able to make a post advertising a football game and other users will be able to comment on the post to confirm their availability.
 
+https://viewpoint2022.herokuapp.com/
 
 ## User Experience (UX)
 
@@ -183,6 +184,13 @@ Multiple Browsers and Screens
 | Is the site responsive to different screen sizes? | The site is fully respnsonsive | Pass |
 
 
+![chrome_KSkOn3tQ7u](https://user-images.githubusercontent.com/103134533/205900101-05b138fe-d7d8-4c3a-b8e5-b105e300ae4d.png) ipad 
+
+![chrome_8BI6bKRJe5](https://user-images.githubusercontent.com/103134533/205900147-444e1268-82a2-4bc4-8eec-52f612707ae0.png) iphone 
+
+
+
+
 Homepage
 
 | Test | Outcome | Pass/Fail |
@@ -264,6 +272,12 @@ Delete Post
 | Yes Button | When button is pressed the post is deleted | Pass |
 | No button | When clicked the deletion is abandoned | Pass |
 | Footer | Footer is present | Pass |
+
+![chrome_xTFbW8y6OE](https://user-images.githubusercontent.com/103134533/205899996-9b1c07b8-1b57-4f3a-8257-5fa217f194e0.png)
+![chrome_V6pC1lyeYe](https://user-images.githubusercontent.com/103134533/205900017-df3cda06-f925-4902-b17c-dce1fc97b890.png)
+![chrome_GRthMse6ad](https://user-images.githubusercontent.com/103134533/205900035-2d57d1b5-7abe-40d3-964b-1e7e05ec4291.png)
+
+
 ## Technologies Used
 
 ### Languages Used
