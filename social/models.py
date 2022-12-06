@@ -7,6 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """ this model gets information for the user's post """
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(
@@ -28,6 +29,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """ this model gets information for the user's comment """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)

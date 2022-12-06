@@ -3,6 +3,7 @@ from django import forms
 
 
 class CommentForm(forms.ModelForm):
+    """ form so users can leave comments """
     class Meta:
         body = forms.CharField(widget=forms.Textarea, label='')
         model = Comment

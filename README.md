@@ -371,8 +371,10 @@ Geographical categories
 Stack Overflow
 
 Code taken from I think therefore I blog from CodeInstitute 
+
 Code taken from https://github.com/josswe26/code-buddy
-My mentor Marcel
+
+My mentor Marcel Mulders
 
 
 

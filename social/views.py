@@ -8,6 +8,7 @@ from django.contrib import messages
 
 
 class PostList(generic.ListView):
+    """ view for the homepage post list """
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
@@ -15,6 +16,7 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    """ view for viewing a specific post in detail """
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
@@ -77,6 +79,7 @@ class PostDetail(View):
 
 
 class UserPostView(View):
+    """ view for creating a post """
 
     def get(self, request):
         """ Get  form  """

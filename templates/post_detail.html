@@ -23,12 +23,11 @@
             </div>
             {% endif %}
         </div>
-    </div>
 
 
 <div class="container">
     <div class="row-6">
-        <div">
+        <div>
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <p class="card-text ">
@@ -43,7 +42,7 @@
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            <!--total_comments variable -->
                             {{ total_comments }}</strong>
                         {% endwith %}  
                         
@@ -52,7 +51,7 @@
             </div>
             <div class="card-body">
                 <h3>Comments:</h3>
-               <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+               <!-- for loop inside the empty control tags to iterate through each comment in comments -->
                {% for comment in comments %}
                <div class="comments" style="padding: 10px;">
                    <p class="font-weight-bold">
@@ -72,7 +71,7 @@
                <div class="card-body">
                
                    {% if user.is_authenticated %}
-   
+   <!-- comment form from forms.py -->
                    <form class="comment-form" method="POST">
                        {{ comment_form | crispy }}
                        {% csrf_token %}
@@ -87,16 +86,6 @@
            </div>
         </div>
     </div>
-    <div>
-        <div>
-           
-           
-        </div>
-        <div>
-            
-        </div>
-    </div>
 </div>
-
 
 {% endblock content %}
