@@ -1,1 +1,1 @@
-web: gunicorn viewpoint.wsgi
+web: gunicorn gametonight.wsgi
