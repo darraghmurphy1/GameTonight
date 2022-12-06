@@ -96,19 +96,6 @@ body {
     text-decoration: none;
 }
 
-.btn-like {
-    color: #ff0000;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #ffffff;
-    background: transparent;
-    border: none;
-}
-
 .comment-form {
     max-width: 540px;
 }

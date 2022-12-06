@@ -93,17 +93,19 @@ Approved - Automatically approves comments for posting
 WireFrames
 
 Home
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/homewireframe.png)
+
+
 Post Detail
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/postdetailwire.png)
+
+
 Make a Post
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/post1.png)
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/post2.png)
+
+
 Sign In/Out
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/loginwire.png)
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/signoutwire.png)
+
+
 Registration
-(vscode-remote://darraghmurphy-gametonight-hf7hkmk2jk0.ws-eu77.gitpod.io/workspace/gametonight/readmemedia/registrationwire.png)
+
 
 Colour Scheme 
 
@@ -156,6 +158,13 @@ As a Site User I can click on a post so that I can read the full text
 
 As a Site User I can view a list of posts so that I can select one to read
 -The user is greeted with a full list of posts.
+
+Multiple Browsers and Screens 
+
+| Test | Outcome | Pass/Fail |
+| ----------- | ----------- | ---------- |
+| Does the site work on different browsers? | The site has been viewed on Google Chrome, Firefox, Microsoft Edge and Safari | Pass |
+| Is the site responsive to different screen sizes? | The site is fully respnsonsive | Pass |
 
 
 Homepage
