@@ -99,3 +99,9 @@ body {
 .comment-form {
     max-width: 540px;
 }
+
+.footer {
+    position: fixed;
+    Width: 100%;
+    bottom: 0;
+}
