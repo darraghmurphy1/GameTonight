@@ -93,18 +93,25 @@ Approved - Automatically approves comments for posting
 WireFrames
 
 Home
+![BalsamiqWireframes_7x3m0Xns9C](https://user-images.githubusercontent.com/103134533/205857738-cf817c68-a1c4-48e9-b599-d62cd4c147c2.png)
 
 
 Post Detail
+![BalsamiqWireframes_QOLU5h3tcQ](https://user-images.githubusercontent.com/103134533/205857767-8cb58237-9160-46ac-9b92-23a48f2762c0.png)
 
 
 Make a Post
+![BalsamiqWireframes_162waNIwxM](https://user-images.githubusercontent.com/103134533/205857786-18acd6e2-478e-4a3a-a346-4908a877d7c0.png)
+![BalsamiqWireframes_O4U91J9DG2](https://user-images.githubusercontent.com/103134533/205857803-77005942-a21c-4723-8334-463630426f9a.png)
 
 
 Sign In/Out
+![BalsamiqWireframes_PCmtAuTjjQ](https://user-images.githubusercontent.com/103134533/205857825-cc82de93-a5e7-4f05-a1b4-41baa3b3a517.png)
+![BalsamiqWireframes_61UIP3e1mZ](https://user-images.githubusercontent.com/103134533/205857853-776b739e-a4d9-4b7d-a14f-3da79fe780b7.png)
 
 
 Registration
+![BalsamiqWireframes_pNttOUqNY9](https://user-images.githubusercontent.com/103134533/205857878-c56019f6-2a63-4401-a6ca-e879cd46bca8.png)
 
 
 Colour Scheme 
