@@ -278,6 +278,11 @@ Delete Post
 ![chrome_GRthMse6ad](https://user-images.githubusercontent.com/103134533/205900035-2d57d1b5-7abe-40d3-964b-1e7e05ec4291.png)
 
 
+Lighthouse Report
+
+![chrome_k6dyZ5liaO](https://user-images.githubusercontent.com/103134533/205900693-4e165d4b-c7b1-44f6-9b28-3191affbf2dc.png)
+
+
 ## Technologies Used
 
 ### Languages Used
