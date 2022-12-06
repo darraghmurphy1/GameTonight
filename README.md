@@ -353,11 +353,10 @@ Store Static and Media files in Cloudinary and Deploy to Heroku:
 
 Create three directories in the main directory; media, storage and templates.
 Create a file named "Procfile" in the main directory and add the following:
-web: gunicorn gametonight.wsgi
+web: gunicorn viewpoint.wsgi
 Go to Deploy tab on Heroku and connect to the GitHub, then to the required recpository. Click on Delpoy Branch and wait for the build to load. When the build is complete, the app can be opened through Heroku.
 
 ## Remaining features to implements 
-
 Search 
 
 Like button 
