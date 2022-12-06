@@ -56,11 +56,11 @@ The following aspects must be present in the aplication:
 * Ability to search for for posts.
 
 
-<!-- insert pictures of user stories here >
-
-<!-- insert pictures of website structure here >
-
-<-- picture of site flow chart  -->
+![F0wbIMCUNd](https://user-images.githubusercontent.com/103134533/205859002-fad4825a-59b1-4d18-9029-94aee9f00c75.png)
+![chrome_jeClRoUeAI](https://user-images.githubusercontent.com/103134533/205859036-be2d04ea-240d-4ca0-99ee-cd18b702e6e0.png)
+![chrome_0jy6t2MzZ9](https://user-images.githubusercontent.com/103134533/205859063-a74e5b2e-747a-482c-976a-0d7283096a84.png)
+![chrome_E7bNuVG5k5](https://user-images.githubusercontent.com/103134533/205859086-402d174d-1130-496d-8042-9bd447dd2435.png)
+>
 
 the header, footer and navigation bar are the same on every page as they are in the base.html that everythihng else is extended from.
 
@@ -68,7 +68,7 @@ Forms must be very simple and clearly describe what the user must do.
 
 Some information on the site is accessible without log in and some content is only visable if a user is authenticated.
 
-<!-- insert database flowchart  -->
+![chrome_8bkiGGLo23](https://user-images.githubusercontent.com/103134533/205864673-9a843653-bb04-4e26-9eac-6cba69710949.png)
 
 Post Model 
 
