@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'favourite/css/favourite.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- add to favourite form -->
+<div class="container" style="margin-top: 20%;">
+<div class="row justify-content-center mt-5" style="margin-top: 20%;">
+  <div class="col-lg-6 col-md-8">
+    <form method="post" action="{% url 'favourite_add' post.id %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <p>Add to favourite will add the previously viewed prodoct to favourite. The dropdown contains our other items but will not effect your selection.</p>
+        {{ form.post }}
+      </div>
+      <button type="submit" class="btn btn-primary" style="background-color: black;
+      color: hotpink;">Add to favourite</button>
+    </form>
+    <hr>
+  </div>
+</div>
+</div>
+{% endblock %}

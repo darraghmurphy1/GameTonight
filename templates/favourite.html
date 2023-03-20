@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'favourite/css/favourite.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- Page overlay to cover image -->
+    <div class="overlay"></div>
+    <div class="container-fluid" style="margin-top: 20%;">
+
+        <!-- Reviews main header -->
+        <div class="row py-4 border-top border-bottom">
+            <div class="col text-center">
+                <h1 class="logo-text">My favourites</h1>
+            </div>
+        </div>
+
+        <!-- My reviews -->
+        <div class="row">
+            <div class="col-10 offset-1 col-lg-8 offset-lg-2">
+
+                <div class="review-container mt-4">
+                    {% if favourites %}
+                        {% for favourite in favourites %}
+                            <div class="my-4 pb-4 border-bottom">
+                                <div class="favourite-post">
+                                  
+
+                                    <a class="link-black" href="{% url 'powt_detail' favourite.post.id %}">
+                                        <h4 class="d-inline py-auto">{{favourite.product.name }}</h4>                                        
+
+                                    </a>
+                                    <form method="POST" action="{% url 'delete_favourite' favourite.id %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                      </form>
+                                </div>
+                            </div>
+                        {% endfor %}              
+                    {% else %}
+                        <p class="lead mb-5">You haven't review any products yet.</p>
+                        <a href="{% url 'home' %}" class="btn btn-main hvr-back-pulse btn-lg">
+                            <i class="fas fa-chevron-left"></i>
+                            <span class="text-uppercase">Explore Products</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

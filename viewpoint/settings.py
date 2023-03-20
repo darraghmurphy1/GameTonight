@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'social',
+    'newsletter',
+    'favourites',
 ]
 
 SITE_ID = 1
@@ -95,6 +97,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
+                'newsletter.contexts.render_subscribe_form',
+
             ],
         },
     },
@@ -143,4 +147,4 @@ DEFAULT_FILES_STORAGE = 'Cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurphy-viewpoint-om6mp9jcchj.ws-eu77.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-darraghmurphy-viewpoint-aqe9tgr0onc.ws-eu90.gitpod.io']

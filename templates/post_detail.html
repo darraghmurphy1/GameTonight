@@ -11,6 +11,14 @@
 
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                {% if user.is_authenticated %}
+                  <!-- add to wishlist button -->
+                  <button style="font-size: 14px; background-color: black; color: hotpink; height: 25px; margin-top: 5px;">
+                    <a href="{% url 'favourite_add' post_id=post.id %}" style="text-decoration: none; color: inherit;">Add to Favourites</a>
+                  </button>
+                  
+                {% endif %}
+                </div>
           
             <!-- Show Edit and Delete buttons on questions created by the user -->
             {% if request.user == post.author %}
