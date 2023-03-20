@@ -21,6 +21,10 @@ https://viewpoint2022.herokuapp.com/
 
 * Site users should be able to search for a post so as to find one local to them.
 
+* Site user able to add to favourites
+
+* Site user able to subscribe to newsletter
+
 
 #### User Goals
 
@@ -40,6 +44,10 @@ As a Site User / Admin I can view the number of likes on each post so that I can
 As a Site User I can click on a post so that I can read the full text
 
 As a Site User I can view a list of posts so that I can select one to read
+
+As a site user I can subscribe to a newsletter
+
+As a site user I can add a post to favourites
 
 
 ### Scope
@@ -90,6 +98,15 @@ Name  - The name of the commenter
 Email - The email or the commenter 
 Created on - The time and date the comment was created
 Approved - Automatically approves comments for posting
+
+Subscriber Model
+
+post - foreign key 
+user - owner of favourite
+
+Newsletter Model 
+
+email - for to send to newsletter
 
 ## WireFrames
 
@@ -176,6 +193,12 @@ As a Site User I can click on a post so that I can read the full text
 As a Site User I can view a list of posts so that I can select one to read
 -The user is greeted with a full list of posts.
 
+As a site user I can subscribe to a newsletter
+-User can subscribe
+
+As a site user I can add a post to favourites
+-User can add to favourites
+
 Multiple Browsers and Screens 
 
 | Test | Outcome | Pass/Fail |
@@ -198,6 +221,7 @@ Homepage
 | Navbar | All navigation links are working | Pass |
 | Posts are visable | When page is loaded posts show on page | Pass |
 | Footer | Footer is present | Pass |
+| Subscription button | Present and working | Pass |
 
 Post Detail 
 
@@ -214,6 +238,7 @@ Post Detail
 | Delete Post | If the original poster clicks onto their post the delete button is present | Pass |
 | Edit Post | If the original poster clicks onto their post the edit button is present | Pass |
 | Footer | Footer is present | Pass |
+| Add to favourites | adds to favourites | Pass |
 
 Sign In 
 
