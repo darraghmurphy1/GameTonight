@@ -6,7 +6,7 @@ urlpatterns = [
     # url for homepage
     path('', views.PostList.as_view(), name='home'),
     # url for a more detailed view of a post
-    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    path('post/<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     # url to post form
     path('user_post', views.UserPostView.as_view(), name='user_post'),
     # url for edit form

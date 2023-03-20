@@ -33,7 +33,7 @@ def add_favourite(request, post_id):
     if user_favourite:
         messages.error(request,
                        'You have already added this')
-        return redirect(reverse('post_detail', args=[post.id]))
+        return redirect(reverse('post_detail', args=[post.slug]))
     else:
         if request.method == 'POST':
             form = FavouriteForm(request.POST, request.FILES)
@@ -44,7 +44,7 @@ def add_favourite(request, post_id):
                 messages.success(request,
                                  'Your post favourite has been submitted')
 
-                return redirect(reverse('post_detail', args=[post.id]))
+                return redirect(reverse('post_detail', args=[post.slug]))
             else:
                 messages.error(request, 'Failed to submit the favourite. \
                     Please ensure the form is valid.')
@@ -69,10 +69,10 @@ def delete_favourite(request, favourite_id):
     if request.user != favourite.user:
         messages.error(request, 'You are not authorized \
             to delete this favourite.')
-        return redirect(reverse('post_detail', args=[favourite.post.id]))
+        return redirect(reverse('post_detail', args=[favourite.post.slug]))
 
     favourite.delete()
     messages.success(request, 'Your favourite has been deleted!')
     print('favourite', favourite)
 
-    return redirect(reverse('post_detail', args=[favourite.post.id]))
+    return redirect(reverse('post_detail', args=[favourite.post.slug]))

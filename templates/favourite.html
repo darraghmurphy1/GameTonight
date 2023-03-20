@@ -18,7 +18,6 @@
             </div>
         </div>
 
-        <!-- My reviews -->
         <div class="row">
             <div class="col-10 offset-1 col-lg-8 offset-lg-2">
 
@@ -29,22 +28,19 @@
                                 <div class="favourite-post">
                                   
 
-                                    <a class="link-black" href="{% url 'powt_detail' favourite.post.id %}">
-                                        <h4 class="d-inline py-auto">{{favourite.product.name }}</h4>                                        
+                                    <a class="link-black" href="{% url 'post_detail' favourite.post.slug %}">
+                                        <h4 class="d-inline py-auto">{{favourite.post.title }}</h4>                                        
 
                                     </a>
-                                    <form method="POST" action="{% url 'delete_favourite' favourite.id %}">
-                                        {% csrf_token %}
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                      </form>
+
                                 </div>
                             </div>
                         {% endfor %}              
                     {% else %}
-                        <p class="lead mb-5">You haven't review any products yet.</p>
+                        <p class="lead mb-5">You haven't added any yet.</p>
                         <a href="{% url 'home' %}" class="btn btn-main hvr-back-pulse btn-lg">
                             <i class="fas fa-chevron-left"></i>
-                            <span class="text-uppercase">Explore Products</span>
+                            <span class="text-uppercase">Explore posts</span>
                         </a>
                     {% endif %}
                 </div>

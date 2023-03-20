@@ -21,7 +21,7 @@ class Post(models.Model):
     likes = models.ManyToManyField(
         User, related_name='post_like', blank=True)
     users_favourite = models.ManyToManyField(User,
-                                            related_name='wishlist_products',
+                                            related_name='favourite_products',
                                             blank=True)
 
     class Meta:
